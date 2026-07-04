@@ -1539,27 +1539,91 @@
         </div>
     </header>
 
-    <!-- ─── HERO ─── -->
+    <!-- ===== HERO ===== -->
     <section class="hero">
         <div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
         <div class="grid-overlay"></div>
         <div class="hero-content wrap">
-            <div class="eyebrow" style="justify-content:center;">Premium Digital Agency</div>
-            <h1 id="hero-title" class="glitch-text">
-                <!-- Injected by JS -->
-            </h1>
-            <p class="sub">Anurag Web Builders builds high-performance websites, AI automation and growth systems for brands that refuse to look ordinary. Strategy, design and engineering — under one roof. Starting at just <strong style="color:var(--primary);">₹5000</strong>.</p>
+            <div class="eyebrow" style="justify-content:center;">Premium Digital Agency — Hyderabad</div>
+            <h1 id="hero-title" class="glitch-text"></h1>
+            <p class="sub">We build AI‑powered websites that generate leads, automate follow‑ups, and help businesses grow—not just look good. Strategy, design and engineering under one roof.</p>
             <div class="hero-ctas">
-                <a href="#contact" class="btn btn-primary">Book a Free Strategy Call <i data-lucide="arrow-right" style="width:17px;"></i></a>
-                <a href="#showcase" class="btn btn-ghost">View Our Showcase</a>
+                <a href="#contact" class="btn btn-primary">Get My Free Growth Plan <i data-lucide="arrow-right" style="width:17px;"></i></a>
+                <a href="#showcase-section" class="btn btn-ghost">View Success Stories</a>
             </div>
             <div class="hero-chips">
                 <div class="chip"><span class="dot"></span>120+ projects shipped</div>
                 <div class="chip"><span class="dot"></span>4.9/5 average client rating</div>
                 <div class="chip"><span class="dot"></span>50% less than competitors</div>
             </div>
+            <!-- Rotator Indicator Dots -->
+            <div class="hero-rotator-dots" id="heroRotatorDots"></div>
         </div>
     </section>
+  <!-- ===== TRUST ===== -->
+  <section class="trust-section">
+    <div class="wrap">
+      <p class="trust-label">Trusted by businesses across India</p>
+      <div class="trust-grid">
+        <div class="trust-item"><i data-lucide="check-circle" style="width:16px;"></i> Real Estate</div>
+        <div class="trust-item"><i data-lucide="check-circle" style="width:16px;"></i> Healthcare</div>
+        <div class="trust-item"><i data-lucide="check-circle" style="width:16px;"></i> Education</div>
+        <div class="trust-item"><i data-lucide="check-circle" style="width:16px;"></i> E‑Commerce</div>
+        <div class="trust-item"><i data-lucide="check-circle" style="width:16px;"></i> SaaS</div>
+        <div class="trust-item"><i data-lucide="check-circle" style="width:16px;"></i> Professional Services</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section style="padding-top:60px;">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-num grad-text" data-count="120">0</div>
+          <div class="stat-label">Projects delivered</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-num grad-text" data-count="98">0</div>
+          <div class="stat-label">% client retention</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-num grad-text" data-count="43">0</div>
+          <div class="stat-label">Industries served</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-num grad-text" data-count="6">0</div>
+          <div class="stat-label">Years in operation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDER ===== -->
+  <section style="background:rgba(255,255,255,0.01);">
+    <div class="wrap">
+      <div class="founder-grid">
+        <div class="reveal">
+          <div class="eyebrow">Meet the Founder</div>
+          <h2 class="text-4xl md:text-5xl font-bold font-['Space_Grotesk'] mb-4">Hi, I'm <span class="grad-text">Anurag.</span></h2>
+          <p class="text-muted text-lg mb-4">I noticed businesses were spending lakhs on websites that looked beautiful but didn't generate customers.</p>
+          <p class="text-muted text-lg">Our mission is simple: <strong class="text-white">build websites that make businesses money.</strong></p>
+          <div class="flex items-center gap-4 mt-6">
+            <div class="founder-avatar">A</div>
+            <div><h4 class="font-semibold">Anurag Reddy</h4><p class="text-sm text-muted">Founder & Lead Developer</p></div>
+          </div>
+        </div>
+        <div class="glass-panel p-8 rounded-2xl reveal delay-200">
+          <h3 class="text-2xl font-bold mb-4">Why I Started This</h3>
+          <div class="space-y-4 text-muted text-sm leading-relaxed">
+            <p>After building websites for 6 years, I realized most agencies deliver code, not results. Business owners couldn't tell if their website was actually working.</p>
+            <p>So I built a system that measures and optimizes for conversions—not just aesthetics. Every line of code is written to drive revenue.</p>
+            <p>Now I help businesses across India turn their digital presence into their most reliable sales channel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- ─── LOGOS ─── -->
     <section class="logos-section" style="padding-top:0;">
@@ -1621,89 +1685,67 @@
         </div>
     </section>
 
-    <!-- ─── INDUSTRY SHOWCASE ─── -->
-    <section id="showcase" style="background:rgba(255,255,255,0.02);">
-        <div class="wrap">
-            <div class="section-head center">
-                <div class="eyebrow">Showroom</div>
-                <h2>Industry <span class="grad-text">Showroom</span></h2>
-                <p>Explore our live project previews across different industries. Each build is custom-engineered for maximum impact.</p>
-            </div>
+    
+    <!-- 2.5. Value Proposition / Marketing Section -->
+    <section id="marketing" class="max-w-7xl mx-auto px-6 py-20 md:py-32">
+        <!-- Marketing Container (Glassmorphism Added) -->
+        <div class="grid md:grid-cols-2 gap-12 items-center glass-panel p-8 md:p-12 rounded-3xl shadow-2xl">
+            <!-- Left Column: Value Proposition & Quote -->
+            <div class="text-left">
+                <!-- Text Scanner Class Added -->
+                <h2 class="text-5xl md:text-6xl font-extrabold mb-8 text-white scroll-reveal text-scanner">
+                    Affordable Website <span class="dynamic-text-fill">Pricing</span>
+                </h2>
+                <p class="text-xl text-gray-400 mb-6 scroll-reveal" data-scroll-delay="0.1">
+                    In a crowded digital world, creators need more than just a website; they need an engineered advantage. We eliminate the industry standard of inflated costs without compromising on cutting-edge design or robust architecture.
+                </p>
 
-            <div class="industry-tabs" id="industryTabs">
-                <button class="industry-tab active" data-industry="marketing">Marketing / Agency</button>
-                <button class="industry-tab" data-industry="restaurant">Restaurant / Cafe</button>
-                <button class="industry-tab" data-industry="realestate">Real Estate</button>
-                <button class="industry-tab" data-industry="portfolio">Portfolio</button>
-                <button class="industry-tab" data-industry="entrepreneur">Startup / MVP</button>
-                <button class="industry-tab" data-industry="custom">Custom / Unique</button>
-            </div>
+                <blockquote class="border-l-4 border-neon-accent pl-6 py-3 my-8 italic text-gray-300 scroll-reveal" data-scroll-delay="0.3">
+                    "Thousands of creators exist. Only a few break through. We provide the essential, custom-built infrastructure at a price point that makes scaling immediately viable. You won't find this level of quality and affordability elsewhere."
+                </blockquote>
 
-            <div class="showcase-glass" id="showcaseContent">
-                <div class="grid md:grid-cols-5 gap-8">
-                    <div class="md:col-span-3">
-                        <div class="showcase-preview" id="showcasePreview">
-                            <iframe id="showcaseIframe" src="https://unknownmillionaire2004.github.io/Marketing-Agency-Template/" loading="lazy" title="Live Website Preview"></iframe>
-                            <a href="https://unknownmillionaire2004.github.io/Marketing-Agency-Template/" target="_blank" id="showcaseLink"><span>VIEW LIVE SITE</span></a>
-                        </div>
-                    </div>
-                    <div class="md:col-span-2">
-                        <h3 id="showcaseTitle" class="text-2xl font-bold font-['Space_Grotesk'] mb-2">High-Conversion Agency Website</h3>
-                        <p id="showcaseDesc" class="text-muted text-sm mb-4">A dynamic marketing site built to capture leads and clearly present service ROI data.</p>
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-primary mb-2">Key Features:</h4>
-                        <ul id="showcaseFeatures" class="text-muted text-sm space-y-1 list-disc list-inside">
-                            <li>Scroll-Triggered Data Stats.</li>
-                            <li>Integrated Lead-Capture Forms.</li>
-                            <li>Case Study Carousel (Dynamic).</li>
-                            <li>A/B Test Ready Architecture.</li>
-                        </ul>
-                        <a href="https://wa.me/919515740405?text=Hello%20Anurag%20Web%20Builders%2C%20I%20saw%20your%20website%20and%20I%27m%20interested%20in%20starting%20a%20project!%20My%20name%20is%20%5BClient%20Name%5D%2C%20and%20I%27m%20looking%20for%20a%20%5BProject%20Type%5D.%20Can%20we%20discuss%20a%20quick%20quote%3F" target="_blank" class="btn btn-primary mt-4 w-full justify-center">Contact Now — Build This!</a>
-                    </div>
+                <div class="p-6 bg-neon-accent rounded-lg shadow-xl text-gray-900 font-extrabold text-center scroll-reveal" data-scroll-delay="0.5">
+                    <p class="text-2xl md:text-3xl uppercase tracking-wider">
+                        <span class="block">Websites Starting Only From</span>
+                        <strong class="text-5xl md:text-6xl my-2 block">₹5000</strong>
+                        <span class="block text-lg font-semibold">(50% Less Than Competitors)</span>
+                    </p>
                 </div>
+            </div>
+
+            <!-- Right Column: Unique Offering Highlights -->
+            <div class="space-y-6 md:pl-10 mt-8 md:mt-0"> <!-- ADDED mt-8 for mobile stacking clarity -->
+                <h3 class="text-3xl font-bold neon-text uppercase tracking-wider mb-6 scroll-reveal" data-scroll-delay="0.7">
+                    Why Our Protocol?
+                </h3>
+                <ul class="space-y-6 text-lg text-gray-300">
+                    <li class="p-4 rounded-lg bg-gray-900 border border-gray-800 flex items-start space-x-4 scroll-reveal" data-scroll-delay="0.8">
+                        <span class="text-2xl neon-text flex-shrink-0">✓</span>
+                        <div>
+                            <strong class="text-white block">Unmatched Affordability:</strong> We are proud to offer prices **50% lower** than industry averages, without ever sacrificing quality or performance.
+                        </div>
+                    </li>
+                    <li class="p-4 rounded-lg bg-gray-900 border border-gray-800 flex items-start space-x-4 scroll-reveal" data-scroll-delay="0.9">
+                        <span class="text-2xl neon-text flex-shrink-0">✓</span>
+                        <div>
+                            <strong class="text-white block">Unique, Non-Template Builds:</strong> Your project is custom-engineered from the ground up, guaranteeing a unique solution that competitors simply cannot replicate at this price.
+                        </div>
+                    </li>
+                    <li class="p-4 rounded-lg bg-gray-900 border border-gray-800 flex items-start space-x-4 scroll-reveal" data-scroll-delay="1.0">
+                        <span class="text-2xl neon-text flex-shrink-0">✓</span>
+                        <div>
+                            <strong class="text-white block">Engineering-First Approach:</strong> Focus on speed, SEO, and robust scaling from day one. Your website isn't just pretty; it's a high-performance machine.
+                        </div>
+                    </li>
+                </ul>
+                <!-- 4. PRICING CTA - UPDATED with Auto Message -->
+                <a href="https://wa.me/919515740405?text=Hello%20Anurag%20Web%20Builders%2C%20I%20saw%20your%20website%20and%20I%27m%20interested%20in%20starting%20a%20project!%20My%20name%20is%20%5BClient%20Name%5D%2C%20and%20I%27m%20looking%20for%20a%20%5BProject%20Type%5D.%20Can%20we%20discuss%20a%20quick%20quote%3F" target="_blank" class="inline-block mt-6 px-8 py-3 text-lg font-bold uppercase tracking-wider rounded-lg transition-all duration-300 creative-neon-button transform hover:scale-105" data-hover-cursor>
+                    Claim Your 50% Off Offer
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- ─── PRICING / VALUE PROPOSITION ─── -->
-    <section id="pricing">
-        <div class="wrap">
-            <div class="pricing-glass reveal">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="eyebrow">Pricing</div>
-                        <h2 class="text-3xl md:text-4xl font-bold font-['Space_Grotesk'] mb-4">Affordable Website <span class="grad-text">Pricing</span></h2>
-                        <p class="text-muted text-lg mb-6">In a crowded digital world, creators need more than just a website; they need an engineered advantage. We eliminate inflated costs without compromising on cutting-edge design or robust architecture.</p>
-                        <blockquote class="border-l-4 border-primary pl-6 py-3 my-6 italic text-gray-300">
-                            "Thousands of creators exist. Only a few break through. We provide the essential, custom-built infrastructure at a price point that makes scaling immediately viable."
-                        </blockquote>
-                        <div class="bg-primary/10 border border-primary/20 rounded-xl p-6 text-center">
-                            <p class="text-sm uppercase tracking-wider text-muted">Websites Starting Only From</p>
-                            <div class="price-number"><span class="grad-text">₹5000</span></div>
-                            <p class="text-sm font-semibold text-primary">50% Less Than Competitors</p>
-                        </div>
-                    </div>
-                    <div class="space-y-5">
-                        <h3 class="text-2xl font-bold neon-text uppercase tracking-wider">Why Our Protocol?</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
-                                <span class="text-2xl text-primary flex-shrink-0">✓</span>
-                                <div><strong class="text-white block">Unmatched Affordability:</strong> Prices <strong class="text-primary">50% lower</strong> than industry averages, without ever sacrificing quality.</div>
-                            </div>
-                            <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
-                                <span class="text-2xl text-primary flex-shrink-0">✓</span>
-                                <div><strong class="text-white block">Unique, Non-Template Builds:</strong> Custom-engineered from the ground up — unique solutions competitors cannot replicate at this price.</div>
-                            </div>
-                            <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
-                                <span class="text-2xl text-primary flex-shrink-0">✓</span>
-                                <div><strong class="text-white block">Engineering-First Approach:</strong> Focus on speed, SEO, and robust scaling from day one.</div>
-                            </div>
-                        </div>
-                        <a href="https://wa.me/919515740405?text=Hello%20Anurag%20Web%20Builders%2C%20I%20saw%20your%20website%20and%20I%27m%20interested%20in%20starting%20a%20project!%20My%20name%20is%20%5BClient%20Name%5D%2C%20and%20I%27m%20looking%20for%20a%20%5BProject%20Type%5D.%20Can%20we%20discuss%20a%20quick%20quote%3F" target="_blank" class="btn btn-primary w-full justify-center">Claim Your 50% Off Offer</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ─── PORTFOLIO ─── -->
     <section id="portfolio" style="background:rgba(255,255,255,0.02);">
