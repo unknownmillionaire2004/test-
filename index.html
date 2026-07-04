@@ -1046,53 +1046,6 @@
     }
 
     /* ============================================================
-       FAQ
-       ============================================================ */
-    .faq-item {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    }
-    .faq-item:last-child {
-      border-bottom: none;
-    }
-    .faq-q {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding: 20px 4px;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 16px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
-      cursor: pointer;
-      text-align: left;
-    }
-    .faq-q svg {
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-      color: var(--muted);
-    }
-    .faq-item.open .faq-q svg {
-      transform: rotate(45deg);
-      color: var(--primary);
-    }
-    .faq-a {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-    .faq-a p {
-      padding: 0 4px 20px;
-      color: var(--muted);
-      font-size: 14px;
-      max-width: 640px;
-      line-height: 1.7;
-    }
-
-    /* ============================================================
        CONTACT
        ============================================================ */
     .contact-card {
@@ -1605,27 +1558,30 @@
       </div>
     </div>
   </section>
+  
+    <!-- ─── AGITATION SECTION (Why they need you) ─── -->
+    <section id="agitation" class="agitation wrap">
+        <div class="text-center max-w-3xl mx-auto reveal">
+            <div class="eyebrow" style="color: #ef4444;">The Hard Truth</div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">90% of business websites are dead digital brochures.</h2>
+            <p class="text-xl text-gray-400">If your website isn't actively generating revenue, it is costing you money. Most agencies sell you a pretty design with zero underlying sales logic.</p>
+        </div>
 
-  <!-- ===== SERVICES ===== -->
-  <section id="services" class="section-pad">
-    <div class="wrap">
-      <div class="section-head reveal" style="max-width:600px; margin-bottom:48px;">
-        <div class="eyebrow">What We Do</div>
-        <h2 style="font-size:clamp(32px,4vw,44px); font-weight:700; margin-bottom:12px;">One team, every growth lever.</h2>
-        <p style="color:var(--muted); font-size:17px; line-height:1.7;">From first sketch to scaled acquisition — every discipline your business needs to compete.</p>
-      </div>
-      <div class="services-grid">
-        <div class="svc-card reveal"><div class="icon"><i data-lucide="layout-template"></i></div><h3>Website Development</h3><p>Fast, accessible, conversion-engineered websites built on modern frameworks.</p></div>
-        <div class="svc-card reveal"><div class="icon"><i data-lucide="bot"></i></div><h3>AI Automation</h3><p>Custom AI workflows that cut manual work and respond to customers instantly.</p></div>
-        <div class="svc-card reveal"><div class="icon"><i data-lucide="sparkles"></i></div><h3>Brand Identity</h3><p>Naming, visual systems and voice that make a business memorable.</p></div>
-        <div class="svc-card reveal"><div class="icon"><i data-lucide="search"></i></div><h3>SEO</h3><p>Technical, on-page and content SEO built to compound rankings over time.</p></div>
-        <div class="svc-card reveal"><div class="icon"><i data-lucide="megaphone"></i></div><h3>Digital Marketing</h3><p>Paid and organic campaigns tied directly to pipeline and revenue.</p></div>
-        <div class="svc-card reveal"><div class="icon"><i data-lucide="database"></i></div><h3>CRM Integration</h3><p>Clean, connected CRM systems that give your team one source of truth.</p></div>
-        <div class="svc-card reveal"><div class="icon"><i data-lucide="workflow"></i></div><h3>Business Automation</h3><p>Operational workflows automated end-to-end, from lead to invoice.</p></div>
-        <div class="svc-card reveal"><div class="icon"><i data-lucide="pen-tool"></i></div><h3>UI/UX Design</h3><p>Interfaces designed around real user behaviour, not trends.</p></div>
-      </div>
-    </div>
-  </section>
+        <div class="pain-grid">
+            <div class="pain-card reveal">
+                <h4><i data-lucide="x-circle"></i> Slow Load Times</h4>
+                <p class="text-gray-400">A 1-second delay in page load drops conversions by 7%. Templates and heavy plugins are killing your sales before users even see your offer.</p>
+            </div>
+            <div class="pain-card reveal" style="transition-delay: 0.1s;">
+                <h4><i data-lucide="x-circle"></i> Zero Sales Psychology</h4>
+                <p class="text-gray-400">Standard agencies write generic copy. They don't understand behavioral economics, leaving visitors unmotivated to click "Buy" or "Contact."</p>
+            </div>
+            <div class="pain-card reveal" style="transition-delay: 0.2s;">
+                <h4><i data-lucide="x-circle"></i> Manual Bottlenecks</h4>
+                <p class="text-gray-400">You are manually answering emails and following up with leads. Your competitors are using automated systems to close deals 24/7.</p>
+            </div>
+        </div>
+    </section>
 
   <!-- ===== SHOWCASE ===== -->
   <section id="showcase" class="section-pad" style="background:rgba(255,255,255,0.005); border-top:1px solid rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.04);">
@@ -1723,6 +1679,53 @@
     </div>
   </section>
 
+  <!-- ===== PRICING ===== -->
+    <section id="pricing" class="section-pad" style="background:rgba(255,255,255,0.005); border-top:1px solid rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.04);">
+        <div class="wrap">
+            <div class="section-head center reveal">
+                <div class="eyebrow" style="justify-content:center;">Pricing</div>
+                <h2>Affordable <span class="grad-text">Website Pricing</span></h2>
+                <p>Transparent pricing for businesses serious about growth.</p>
+            </div>
+
+            <div class="glass" style="padding:40px 32px; border-radius:24px;">
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div class="reveal">
+                        <p class="text-secondary" style="font-size:16px; line-height:1.8; margin-bottom:20px;">In a crowded digital world, creators need more than just a website; they need an engineered advantage. We eliminate inflated costs without compromising on cutting-edge design or robust architecture.</p>
+                        <blockquote style="border-left:3px solid var(--primary); padding-left:18px; font-style:italic; color:var(--text-secondary); font-size:15px; margin-bottom:24px;">"Thousands of creators exist. Only a few break through. We provide the essential, custom-built infrastructure at a price point that makes scaling immediately viable."</blockquote>
+                        <div style="background:rgba(0,255,255,0.04); border:1px solid rgba(0,255,255,0.08); border-radius:16px; padding:20px; text-align:center;">
+                            <p style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted);">Websites Starting Only From</p>
+                            <div style="font-size:48px; font-weight:700; font-family:'Space Grotesk',sans-serif; color:var(--primary); margin:4px 0; display:flex; justify-content:center; align-items:baseline; gap:12px; flex-wrap:wrap;">
+                                <span style="text-decoration:line-through; font-size:28px; color:var(--muted); opacity:0.7;">₹25,000</span>
+                                <span>₹9,999 <span style="font-size:20px; font-weight:500;">only</span></span>
+                            </div>
+                            <p style="font-size:14px; font-weight:600; color:var(--primary);">60% Off Limited Time Offer</p>
+                        </div>
+                    </div>
+                    <div class="reveal delay-200">
+                        <h3 style="font-size:24px; font-weight:700; color:var(--primary); margin-bottom:20px;">Why Our Protocol?</h3>
+                        <div style="display:flex; flex-direction:column; gap:12px;">
+                            <div style="display:flex; gap:14px; padding:14px 18px; background:rgba(255,255,255,0.02); border-radius:12px; border:1px solid rgba(255,255,255,0.04);">
+                                <span style="font-size:20px; color:var(--primary); flex-shrink:0;">✓</span>
+                                <div><strong style="display:block; font-size:14px;">Unmatched Affordability</strong><span style="font-size:13px; color:var(--muted);">Prices <strong style="color:var(--primary);">50% lower</strong> than industry averages.</span></div>
+                            </div>
+                            <div style="display:flex; gap:14px; padding:14px 18px; background:rgba(255,255,255,0.02); border-radius:12px; border:1px solid rgba(255,255,255,0.04);">
+                                <span style="font-size:20px; color:var(--primary); flex-shrink:0;">✓</span>
+                                <div><strong style="display:block; font-size:14px;">Unique, Non-Template Builds</strong><span style="font-size:13px; color:var(--muted);">Custom-engineered from the ground up.</span></div>
+                            </div>
+                            <div style="display:flex; gap:14px; padding:14px 18px; background:rgba(255,255,255,0.02); border-radius:12px; border:1px solid rgba(255,255,255,0.04);">
+                                <span style="font-size:20px; color:var(--primary); flex-shrink:0;">✓</span>
+                                <div><strong style="display:block; font-size:14px;">Engineering-First Approach</strong><span style="font-size:13px; color:var(--muted);">Focus on speed, SEO, and robust scaling.</span></div>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn btn-primary" style="width:100%; margin-top:20px;">Claim Your 50% Off Offer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
   <!-- ===== TESTIMONIALS ===== -->
   <section class="section-pad">
     <div class="wrap">
@@ -1757,82 +1760,6 @@
     </div>
   </section>
 
-  <!-- ===== PRICING ===== -->
-  <section id="pricing" class="section-pad" style="background:rgba(255,255,255,0.005); border-top:1px solid rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.04);">
-    <div class="wrap">
-      <div class="section-head center reveal" style="max-width:600px; margin:0 auto 48px; text-align:center;">
-        <div class="eyebrow" style="justify-content:center;">Pricing</div>
-        <h2>Affordable <span class="grad-text">Website Pricing</span></h2>
-        <p style="color:var(--muted); font-size:17px;">Transparent pricing for businesses serious about growth.</p>
-      </div>
-
-      <div class="glass pricing-glass reveal">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <p style="font-size:16px; line-height:1.8; color:rgba(255,255,255,0.7); margin-bottom:20px;">In a crowded digital world, creators need more than just a website; they need an engineered advantage. We eliminate inflated costs without compromising on cutting-edge design or robust architecture.</p>
-            <blockquote style="border-left:3px solid var(--primary); padding-left:18px; font-style:italic; color:rgba(255,255,255,0.6); font-size:15px; margin-bottom:24px;">"Thousands of creators exist. Only a few break through. We provide the essential, custom-built infrastructure at a price point that makes scaling immediately viable."</blockquote>
-            <div style="background:rgba(0,255,255,0.04); border:1px solid rgba(0,255,255,0.08); border-radius:16px; padding:20px; text-align:center;">
-              <p style="font-size:12px; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted);">Websites Starting Only From</p>
-              <div style="font-size:48px; font-weight:700; font-family:'Space Grotesk',sans-serif; color:var(--primary); margin:4px 0;">₹5000</div>
-              <p style="font-size:14px; font-weight:600; color:var(--primary);">50% Less Than Competitors</p>
-            </div>
-          </div>
-          <div>
-            <h3 style="font-size:24px; font-weight:700; color:var(--primary); margin-bottom:20px;">Why Our Protocol?</h3>
-            <div style="display:flex; flex-direction:column; gap:12px;">
-              <div style="display:flex; gap:14px; padding:14px 18px; background:rgba(255,255,255,0.02); border-radius:12px; border:1px solid rgba(255,255,255,0.04);">
-                <span style="font-size:20px; color:var(--primary); flex-shrink:0;">✓</span>
-                <div><strong style="display:block; font-size:14px;">Unmatched Affordability</strong><span style="font-size:13px; color:var(--muted);">Prices <strong style="color:var(--primary);">50% lower</strong> than industry averages.</span></div>
-              </div>
-              <div style="display:flex; gap:14px; padding:14px 18px; background:rgba(255,255,255,0.02); border-radius:12px; border:1px solid rgba(255,255,255,0.04);">
-                <span style="font-size:20px; color:var(--primary); flex-shrink:0;">✓</span>
-                <div><strong style="display:block; font-size:14px;">Unique, Non-Template Builds</strong><span style="font-size:13px; color:var(--muted);">Custom-engineered from the ground up.</span></div>
-              </div>
-              <div style="display:flex; gap:14px; padding:14px 18px; background:rgba(255,255,255,0.02); border-radius:12px; border:1px solid rgba(255,255,255,0.04);">
-                <span style="font-size:20px; color:var(--primary); flex-shrink:0;">✓</span>
-                <div><strong style="display:block; font-size:14px;">Engineering-First Approach</strong><span style="font-size:13px; color:var(--muted);">Focus on speed, SEO, and robust scaling.</span></div>
-              </div>
-            </div>
-            <a href="#contact" class="btn btn-primary" style="width:100%; margin-top:20px;">Claim Your 50% Off Offer</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FAQ ===== -->
-  <section id="faq" class="section-pad">
-    <div class="wrap" style="max-width:760px;">
-      <div class="section-head center reveal" style="max-width:600px; margin:0 auto 48px; text-align:center;">
-        <div class="eyebrow" style="justify-content:center;">FAQ</div>
-        <h2>Common questions.</h2>
-      </div>
-      <div class="glass" style="padding:8px 24px 16px; border-radius:20px;">
-        <div id="faqList">
-          <div class="faq-item open">
-            <button class="faq-q">What industries do you specialize in? <i data-lucide="plus" style="width:18px;"></i></button>
-            <div class="faq-a"><p>We work across SaaS, fintech, e-commerce, healthcare, education, and professional services. Our approach is tailored to each industry's unique challenges and opportunities.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q">How long does a typical project take? <i data-lucide="plus" style="width:18px;"></i></button>
-            <div class="faq-a"><p>Most projects take 6–12 weeks from discovery to launch. Complex enterprise solutions may take longer. We'll give you a clear timeline during the consultation.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q">What does a project cost? <i data-lucide="plus" style="width:18px;"></i></button>
-            <div class="faq-a"><p>Engagements typically range from ₹5,000 to ₹20L depending on scope, complexity and ongoing growth work. We scope every project individually after a discovery call.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q">Do you offer ongoing support after launch? <i data-lucide="plus" style="width:18px;"></i></button>
-            <div class="faq-a"><p>Every project includes a 30-day post-launch support window, with optional retainers for ongoing SEO, automation and design work after that.</p></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q">What's your approach to AI automation? <i data-lucide="plus" style="width:18px;"></i></button>
-            <div class="faq-a"><p>We identify repetitive tasks and bottlenecks in your workflow, then build custom AI solutions that automate them — saving you time and money while improving accuracy.</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section-pad" style="background:rgba(255,255,255,0.005); border-top:1px solid rgba(255,255,255,0.04);">
