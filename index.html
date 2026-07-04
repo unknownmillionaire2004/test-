@@ -225,7 +225,7 @@
     }
 
     /* ============================================================
-       PRELOADER
+       PRELOADER - FIXED FLICKER
        ============================================================ */
     #preloader {
       position: fixed;
@@ -235,10 +235,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: opacity 1s ease;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+      opacity: 1;
+      visibility: visible;
     }
     #preloader.hidden {
       opacity: 0;
+      visibility: hidden;
       pointer-events: none;
     }
     .preloader-text {
@@ -262,7 +265,7 @@
     }
 
     /* ============================================================
-       CANVAS BACKGROUND
+       CANVAS BACKGROUND - LIGHTER ON MOBILE
        ============================================================ */
     #background-canvas {
       position: fixed;
@@ -271,7 +274,12 @@
       width: 100%;
       height: 100%;
       z-index: -2;
-      opacity: 0.2;
+      opacity: 0.15; /* reduced from 0.2 */
+    }
+    @media (max-width: 768px) {
+      #background-canvas {
+        opacity: 0.08; /* even lighter on mobile to reduce flicker */
+      }
     }
 
     /* ============================================================
@@ -398,7 +406,7 @@
     }
 
     /* ============================================================
-       HERO
+       HERO - SMOOTH TRANSITIONS
        ============================================================ */
     .hero {
       position: relative;
@@ -1855,6 +1863,7 @@
     let heroInterval = null;
     let isHeroAnimating = false;
 
+    // Smooth transition for hero text
     function updateHeroText(index) {
       const title = document.getElementById('heroTitle');
       const phrase = heroPhrases[index];
@@ -1885,6 +1894,7 @@
         dot.addEventListener('click', () => {
           if (isHeroAnimating) return;
           currentPhraseIndex = idx;
+          // immediate update without fade
           updateHeroText(currentPhraseIndex);
         });
         container.appendChild(dot);
@@ -1893,19 +1903,21 @@
 
     function startHeroRotation() {
       if (heroInterval) clearInterval(heroInterval);
+      // Use a longer interval and a smoother transition via CSS
       heroInterval = setInterval(() => {
         if (isHeroAnimating) return;
         isHeroAnimating = true;
         currentPhraseIndex = (currentPhraseIndex + 1) % heroPhrases.length;
+        // Use a class-based fade
         const title = document.getElementById('heroTitle');
-        title.style.transition = 'opacity 0.4s ease';
+        title.style.transition = 'opacity 0.3s ease';
         title.style.opacity = '0';
         setTimeout(() => {
           updateHeroText(currentPhraseIndex);
           title.style.opacity = '1';
           isHeroAnimating = false;
-        }, 400);
-      }, 5000);
+        }, 350);
+      }, 6000);
     }
 
     // ── Scroll reveal ──
@@ -2047,7 +2059,7 @@
       input.value = '';
     });
 
-    // ── Canvas ──
+    // ── Canvas Background (Lighter on mobile) ──
     function setupCanvasBackground() {
       const canvas = document.getElementById('background-canvas');
       if (!canvas) return;
@@ -2064,10 +2076,12 @@
       resize();
       window.addEventListener('resize', resize);
 
-      const lines = [];
-      const maxLines = 50;
+      // Reduce line count on mobile for performance
+      const isMobile = window.innerWidth < 768;
+      const maxLines = isMobile ? 20 : 50;
       const neonColor = 'rgba(0, 255, 255, 0.04)';
 
+      const lines = [];
       for (let i = 0; i < maxLines; i++) {
         lines.push({
           x: Math.random() * width,
@@ -2130,22 +2144,28 @@
     function runPreloader() {
       const preloader = document.getElementById('preloader');
       if (!preloader) return;
+      // Wait a bit then fade out
       setTimeout(() => {
-        preloader.style.opacity = '0';
+        preloader.classList.add('hidden');
+        // Enable scrolling after preloader is hidden
         setTimeout(() => {
-          preloader.style.display = 'none';
           document.body.style.overflowY = 'auto';
-        }, 1000);
+        }, 800);
       }, 1200);
     }
 
     // ── Init ──
     window.onload = function() {
+      // Start canvas and cursor
       setupCanvasBackground();
       setupCustomCursor();
+      // Build hero dots and start rotation
       buildRotatorDots();
       startHeroRotation();
+      // Preloader
       runPreloader();
+      // Ensure body scroll is enabled if preloader fails
+      document.body.style.overflowY = 'auto';
     };
 
     window.addEventListener('resize', () => {
